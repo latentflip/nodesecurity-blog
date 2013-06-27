@@ -1,0 +1,58 @@
+!!!5
+html
+  head
+    - if (locals.pageTitle)
+      title!= locals.pageTitle + ' | ' + locals.blogTitle
+    - else
+      title= locals.blogTitle
+    meta(http-equiv='Content-Type', content='text/html;charset=utf-8')
+    link(rel='shortcut icon', href='/images/favicon.ico')
+    link(rel='alternate', type='application/atom+xml', title='&yet | the blog', href='http://andyet.net/blog/atom.xml')
+    link(rel='stylesheet', type='text/css', href='/css/reset.css?v=2')
+    link(rel='stylesheet', type='text/css', href='/css/layout.css?v=2')
+    link(rel='stylesheet', href='/css/mobile.css', type='text/css', media='only screen and (max-width: 480px)')
+    meta(name='google-site-verification', content='5G5BCbSpFFFeIsb1WeUjFxgOO9tQuigFXmd6NvSnPHI')
+    //if IE 6
+      script(src='/js/DD_belatedPNG_0.0.8a-min.js')
+      script
+        DD_belatedPNG.fix('#bar_wrapper, #logo, #index, #contentwrapper, #twitter, #index, #contentwrapper, #content, #twitter_icon, #feed_icon, .focus_title');
+      link(rel='stylesheet', type='text/css', href='css/ie6.css')
+      script(src='/js/fixed.js')
+    //if IE 7
+      link(rel='stylesheet', type='text/css', href='css/ie7.css')
+  body#blog
+    #wrapper
+      #head_wrapper
+        h1#logo
+          a(href='/') &amp;yet
+        #menu_wrapper
+          ul#uber_menu
+            li
+              a(href='http://liftsecurity.io') About us
+            li
+              a(href='http://liftsecurity.io/advisories') Advisories
+            li
+              a(href='mailto:contact@liftsecurity.io') Contact
+
+      #contentwrapper
+        #content
+            h1
+              a(href='/')= locals.pageTitle || locals.blogTitle
+            #post_column.col
+              block content
+
+              block pagination
+                include includes/pagination
+            #side_column.col
+              a#twitter(href='http://twitter.com/liftsecurity') Follow us on Twitter
+              h4 ^Lift Security: 
+                span.byline Secure apps are happy apps.
+              p
+                | Find out more at 
+                a(href="http://liftsecurity.io") liftsecurity.io
+              include includes/archive_nav
+
+              include includes/tag_list
+            .clear
+      
+      script(src='/js/google.js')
