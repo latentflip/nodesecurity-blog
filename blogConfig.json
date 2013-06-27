@@ -1,0 +1,13 @@
+{
+  "blogTitle": "",
+  "blogSubtitle": "",
+  "blogAuthor": "Adam Baldwin",
+  "blogAuthorEmail": "contact@liftsecurity.io",
+  "blogBio": "",
+  "siteUrl": "http://blog.liftsecurity.io",
+  "rssUrl": "http://blog.liftsecurity.io/rss",
+  "postDir": "./articles",
+  "uploadDir": "uploads",
+  "blogHome": "/",
+  "maxPosts": 10
+}
