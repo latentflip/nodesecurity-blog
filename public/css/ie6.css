@@ -1,0 +1,30 @@
+#uber_menu {
+	font-size: 14px;
+}
+#bar {
+	margin-top: 390px;
+}
+#bar_wrapper {
+	height: 450px;
+}
+#index_wrapper {
+	margin-top: -30px;
+}
+#menu_wrapper {
+	position: absolute;
+}
+a#twitter:hover {
+	background: url(/images/twitter-link.png) no-repeat 0 -73px;
+}
+#blog #bar {
+	margin-top: 0;
+	height: 30px;
+}
+#blog #bar_wrapper {
+	margin-top: 0;
+	background: #333 top center repeat;
+	height: 30px;
+	z-index: 1;
+}
+#blog #bar_content {
+}
