@@ -1,0 +1,12 @@
+{
+  "blogTitle": "Node Security Project Blog",
+  "blogSubtitle": "We need a tagline contributor™",
+  "blogAuthor": "Node Security",
+  "blogAuthorEmail": "contact@liftsecurity.io",
+  "blogBio": "",
+  "siteUrl": "http://blog.nodesecurity.io",
+  "rssUrl": "http://blog.nodesecurity.io/feed/rss",
+  "postDir": "posts",
+  "blogHome": "/",
+  "maxPosts": 10
+}
