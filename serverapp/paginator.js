@@ -8,7 +8,7 @@ exports.paginate = function (allPosts, req, res, callback) {
         maxPage = Math.ceil(allPosts.length / config.maxPosts);
 
     if (allPosts.length === 0) {
-        currentPage = 1
+        currentPage = 1;
     } else {
         if (req.query.page && !isNaN(Number(req.query.page))) {
             page = Number(req.query.page);
@@ -32,5 +32,5 @@ exports.paginate = function (allPosts, req, res, callback) {
     res.locals.totalPages = maxPage;
     res.locals.currentPage = currentPage;
     res.locals.postData = posts;
-    callback()
-}
+    callback();
+};

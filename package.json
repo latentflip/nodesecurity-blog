@@ -22,7 +22,8 @@
     "watch": "~0.8.0",
     "bucker": "~0.6.4",
     "wtchr": "0.0.1",
-    "yamljs": "~0.1.4"
+    "yamljs": "~0.1.4",
+    "precommit-hook": "~0.3.8"
   },
   "main": "server.js"
 }
