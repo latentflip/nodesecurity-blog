@@ -23,7 +23,8 @@
     "bucker": "~0.6.4",
     "wtchr": "0.0.1",
     "yamljs": "~0.1.4",
-    "precommit-hook": "~0.3.8"
+    "precommit-hook": "~0.3.8",
+    "gravatar": "~1.0.6"
   },
   "main": "server.js"
 }
