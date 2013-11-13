@@ -43,7 +43,7 @@ exports.index = function (req, res) {
     });
 };
 
-exports.tumblrRedirect = function(req, res, next) {
+exports.tumblrRedirect = function (req, res, next) {
     var slug = req.params.tslug,
         post_id = req.params.tid;
 
