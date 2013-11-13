@@ -5,14 +5,15 @@ var fs = require('fs'),
     configFile;
 
 var config = module.exports = {
-    file: function(configFile) {
+    file: function (configFile) {
         var configPath = (require.main ? path.dirname(require.main.filename) : ".") + '/' + configFile;
         logger.debug('loading file:', configPath);
+        var thisConfig;
         try {
-            configContents = fs.readFileSync(configPath, 'utf-8');
-            var thisConfig = JSON.parse(configContents);
+            var configContents = fs.readFileSync(configPath, 'utf-8');
+            thisConfig = JSON.parse(configContents);
             logger.debug('loaded config file');
-        } catch(e) {
+        } catch (e) {
             logger.error('Cannot read the requested file.');
             throw e;
         }

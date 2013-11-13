@@ -11,7 +11,7 @@ var env      = require('getconfig'),
     paginator = require('./paginator');
 
 var parsePosts  = new (require('./ParsePost'))(),
-    postData;
+    postData, postSetData;
 
 // go get a gravatar
 gravatar = gravatar.url(config.blogAuthorEmail, 100);
@@ -20,6 +20,7 @@ function loadPosts(posts) {
     postData = posts.sort(function (a, b) {
         return (b.date - a.date);
     });
+
     postSetData = _.first(posts, [config.maxPosts]);
 }
 
@@ -81,16 +82,16 @@ exports.blogIndex = function (req, res) {
 exports.rss = function (req, res) {
     res.set('Content-Type', 'text/xml');
     res.render('rss', {
-        postData: postSetData,
+        postData: postSetData
     });
 };
 
 
 exports.blogYearIndex = function (req, res) {
-    var year  = req.params.year,
-        month = req.params.month,
-        day   = req.params.day,
-        posts = [];
+    var year  = req.params.year;
+    var month = req.params.month;
+    var day   = req.params.day;
+    var posts = [];
 
     for (var i = 0; i < postData.length; i++) {
         var postYear = Date.create(postData[i].date).format('{yyyy}');
@@ -105,8 +106,8 @@ exports.blogYearIndex = function (req, res) {
         res.render('blogIndex', {
             pageTitle: 'All of ' + year,
             blogTitle: config.blogTitle,
-            blogSubtitle: config.blogSubtitle,
             bodyId: 'archive',
+            blogSubtitle: config.blogSubtitle,
             blogAuthor: config.blogAuthor,
             gravatar: gravatar,
             blogBio: config.blogBio
@@ -115,9 +116,9 @@ exports.blogYearIndex = function (req, res) {
 };
 
 exports.blogMonthIndex = function (req, res) {
-    var year  = req.params.year,
-        month = req.params.month,
-        posts = [];
+    var year  = req.params.year;
+    var month = req.params.month;
+    var posts = [];
 
     for (var i = 0; i < postData.length; i++) {
         var postYear = Date.create(postData[i].date).format('{yyyy}');
@@ -148,10 +149,10 @@ exports.blogMonthIndex = function (req, res) {
 
 
 exports.blogDateIndex = function (req, res) {
-    var year  = req.params.year,
-        month = req.params.month,
-        day   = req.params.day,
-        posts = [];
+    var year  = req.params.year;
+    var month = req.params.month;
+    var day   = req.params.day;
+    var posts = [];
 
     for (var i = 0; i < postData.length; i++) {
         var postYear = Date.create(postData[i].date).format('{yyyy}');
