@@ -5,7 +5,7 @@
   "blogAuthorEmail": "contact@liftsecurity.io",
   "blogBio": "",
   "siteUrl": "http://blog.nodesecurity.io",
-  "rssUrl": "http://blog.nodesecurity.io/feed/rss",
+  "rssUrl": "feed/rss",
   "postDir": "posts",
   "blogHome": "/",
   "maxPosts": 10

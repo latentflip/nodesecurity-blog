@@ -15,6 +15,8 @@ var yaml    = require('yamljs');
 
 var dir = config.postDir;
 var home = config.blogHome;
+var siteUrl = (env.getconfig.env.trim() === 'dev') ? env.baseUrl : config.siteUrl;
+var rssUrl = (config.rssUrl.indexOf('http') !== 0) ? siteUrl + home + config.rssUrl : config.rssUrl;
 var walker = walk.walk(dir);
 var endsWith = sugar.endsWith;
 var startsWith = sugar.startsWith;
@@ -26,7 +28,11 @@ function ParsePosts() {
     EventEmitter.call(this);
 }
 
-ParsePosts.prototype = new EventEmitter();
+ParsePosts.prototype = Object.create(EventEmitter.prototype, {
+    constructor: {
+        value: ParsePosts
+    }
+});
 
 ParsePosts.prototype.parseFile = function (file, callback) {
     // set the slug to the filename
@@ -94,8 +100,8 @@ ParsePosts.prototype.parseFile = function (file, callback) {
             blogTitle: config.blogTitle,
             blogSubTitle: config.blogSubTitle,
             author: metadata.author || config.blogAuthor,
-            siteUrl: config.siteUrl,
-            rssUrl: config.rssUrl
+            siteUrl: siteUrl,
+            rssUrl: rssUrl
         });
     }
 
@@ -108,7 +114,7 @@ ParsePosts.prototype.parseFile = function (file, callback) {
             postData.formattedDate = Date.create(postData.date).format('{Mon} {dd}, {yyyy}');
             postData.fullSlug = Date.create(postData.date).format('{yyyy}-{MM}-{dd}') + '-' + postSlug;
             postData.url = home + Date.create(postData.date).format('{yyyy}/{MM}/{dd}/') + postSlug;
-            postData.permalink = config.siteUrl + postData.url;
+            postData.permalink = siteUrl + postData.url;
 
             // add the metadata to the post array
             logger.debug(require('util').inspect(postData, false, null, true));
