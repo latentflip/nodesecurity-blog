@@ -42,11 +42,22 @@ exports.index = function (req, res) {
     });
 }; 
 
-exports.tumblrRedirect = function(req, res) {
-    var slug = req.params.tslug;
-    var thisPost = _.findWhere(postData, {fullSlug: slug });
-    res.redirect(301, thisPost.permalink);
-    logger.info(thisPost.permalink);
+exports.tumblrRedirect = function(req, res, next) {
+    var slug = req.params.tslug,
+        post_id = req.params.tid;
+
+    var thisPost = _.filter(postData, function (post) {
+        logger.info('post\'s tumblr url is ' + post.tumblr_post_url);
+        var slug_match = (post.tumblr_post_url.indexOf(slug) !== -1),
+            id_match = (post.tumblr_post_url.indexOf(post_id) !== -1);
+        return slug_match || id_match;
+    }).first();
+
+    if (thisPost) {
+        res.redirect(301, thisPost.permalink);
+    } else {
+        exports.notFound.apply(null, arguments);
+    }
     logger.info('Request:  ' + req.url + '\n>>>>> Redirect: ' + slug);
 };
 
