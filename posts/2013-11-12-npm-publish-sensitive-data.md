@@ -1,10 +1,15 @@
-#date: 2013-11-13 00:17:11 GMT
-#slug: npm-publish-sensitive-data
-#tumblr_post_url: http://blog.nodesecurity.io/post/66823501521/npm-publish-sensitive-data
-#tags: npm, confidential, publish, leak
-#title: npm publish sensitive-data
-#type: text
-
+---
+date: "2013-11-13 00:17:11 GMT"
+slug: "npm-publish-sensitive-data"
+tumblr_post_url: "http://blog.nodesecurity.io/post/66823501521/npm-publish-sensitive-data"
+tags: 
+  - npm
+  - confidential
+  - publish
+  - leak
+title: "npm publish sensitive-data"
+type: text
+---
 Most developers using version control systems have heard the advice to be careful about what they publish into their repository. If you haven't it's pretty simple --
 
 Don't publish secret things like keys, passwords, or test data based on real customer data, etc., and if you do clean it up immediately.
@@ -42,7 +47,7 @@ To get rid of a specific version
 > npm unpublish testpackage-asdf@0.0.0
 > 
 
-Finally, make sure the sensitive information is not in your version control history. If it is and you use git you can find out more about removing it with this handy [Github article][0].  
+Finally, make sure the sensitive information is not in your version control history. If it is and you use git you can find out more about removing it with this handy [Github article](https://help.github.com/articles/remove-sensitive-data).  
   
 One behavior that's good to understand is that npm publish will honor your .gitignore file, but only if you don't have a .npmignore.   
   
@@ -50,10 +55,7 @@ That means if your private files were being ignored by .gitignore in the past an
   
 Take a few minutes and audit your published packages, you may be surprised at what you find.  
   
-If you have found a package that you think contains sensitive information please responsibly disclose this to the module author. You can always [_contact the Node Security Project_][1] if you are having difficulties getting a vulnerability addressed.  
+If you have found a package that you think contains sensitive information please responsibly disclose this to the module author. You can always [_contact the Node Security Project_](mailto:contact@liftsecurity.io?subject=Node%20Security%20Project%20) if you are having difficulties getting a vulnerability addressed.  
   
 
 _A special thank you to the module authors that responded extremely quickly to address the concerns about their modules_!
-
-[0]: https://help.github.com/articles/remove-sensitive-data
-[1]: mailto:contact@liftsecurity.io?subject=Node%20Security%20Project%20

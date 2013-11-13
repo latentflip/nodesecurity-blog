@@ -11,7 +11,7 @@ var env      = require('getconfig'),
     paginator = require('./paginator');
 
 var parsePosts  = new (require('./ParsePost'))(),
-    postData;
+    postData, postSetData;
 
 // go get a gravatar
 gravatar = gravatar.url(config.blogAuthorEmail, 100);
@@ -20,7 +20,8 @@ function loadPosts(posts) {
     postData = posts.sort(function (a, b) {
         return (b.date - a.date);
     });
-    var postSetData = _.first(posts, [config.maxPosts]);
+
+    postSetData = _.first(posts, [config.maxPosts]);
 }
 
 // parse and load the post files into memory
@@ -37,16 +38,27 @@ parsePosts.setup();
 // homepage
 exports.index = function (req, res) {
     res.render('index', {
-        pageTitle: 'home', 
+        pageTitle: 'home',
         bodyId: 'home'
     });
-}; 
+};
 
-exports.tumblrRedirect = function (req, res) {
-    var slug = req.params.tslug;
-    var thisPost = _.findWhere(postData, {fullSlug: slug });
-    res.redirect(301, thisPost.permalink);
-    logger.info(thisPost.permalink);
+exports.tumblrRedirect = function(req, res, next) {
+    var slug = req.params.tslug,
+        post_id = req.params.tid;
+
+    var thisPost = _.filter(postData, function (post) {
+        logger.info('post\'s tumblr url is ' + post.tumblr_post_url);
+        var slug_match = (post.tumblr_post_url.indexOf(slug) !== -1),
+            id_match = (post.tumblr_post_url.indexOf(post_id) !== -1);
+        return slug_match || id_match;
+    }).first();
+
+    if (thisPost) {
+        res.redirect(301, thisPost.permalink);
+    } else {
+        exports.notFound.apply(null, arguments);
+    }
     logger.info('Request:  ' + req.url + '\n>>>>> Redirect: ' + slug);
 };
 
@@ -54,8 +66,8 @@ exports.blogIndex = function (req, res) {
     // logger.info(config.blogTitle);
     paginator.paginate(postData, req, res, function (realPage) {
         if (realPage) return res.redirect('/?page=' + realPage);
-        res.render('blogIndex', { 
-            pageTitle: 'All posts', 
+        res.render('blogIndex', {
+            pageTitle: 'All posts',
             blogTitle: config.blogTitle,
             blogSubtitle: config.blogSubtitle,
             bodyId: 'archive',
@@ -72,7 +84,7 @@ exports.rss = function (req, res) {
     res.render('rss', {
         postData: postSetData
     });
-}; 
+};
 
 
 exports.blogYearIndex = function (req, res) {
@@ -91,8 +103,8 @@ exports.blogYearIndex = function (req, res) {
 
     paginator.paginate(posts, req, res, function (realPage) {
         if (realPage) return res.redirect('/' + year + '/?page=' + realPage);
-        res.render('blogIndex', { 
-            pageTitle: 'All of ' + year, 
+        res.render('blogIndex', {
+            pageTitle: 'All of ' + year,
             blogTitle: config.blogTitle,
             bodyId: 'archive',
             blogSubtitle: config.blogSubtitle,
@@ -123,14 +135,14 @@ exports.blogMonthIndex = function (req, res) {
     paginator.paginate(posts, req, res, function (realPage) {
         if (realPage) return res.redirect('/' + year + '/' + month + '/?page=' + realPage);
 
-        res.render('blogIndex', { 
+        res.render('blogIndex', {
             pageTitle: 'All of ' + Date.create(month + '-' + year).format('{Month}, {yyyy}'),
             blogTitle: config.blogTitle,
             blogSubtitle: config.blogSubtitle,
             bodyId: 'archive',
             blogAuthor: config.blogAuthor,
             gravatar: gravatar,
-            blogBio: config.blogBio    
+            blogBio: config.blogBio
         });
     });
 };
@@ -155,8 +167,8 @@ exports.blogDateIndex = function (req, res) {
     paginator.paginate(posts, req, res, function (realPage) {
         if (realPage) return res.redirect('/' + year + '/' + month + '/' + day + '/?page=' + realPage);
 
-        res.render('blogIndex', { 
-            pageTitle: Date.create(year + '-' + month + '-' + day).format('{Month} {d}, {yyyy}'), 
+        res.render('blogIndex', {
+            pageTitle: Date.create(year + '-' + month + '-' + day).format('{Month} {d}, {yyyy}'),
             bodyId: 'archive',
             blogTitle: config.blogTitle,
             blogSubtitle: config.blogSubtitle,
