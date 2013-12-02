@@ -2,7 +2,7 @@
 #slug: elasticsearch-command-execution-using-script
 #tumblr_post_url: http://blog.liftsecurity.io/post/68592779657/elasticsearch-command-execution-using-script
 #tags: elasticsearch,feature,command execution,script
-#title: Elasticsearch Command Execution using \"script\"
+#title: Elasticsearch Command Execution using "script"
 #type: text
 
 In the process of trying to full text index all of the source code from node modules within npm for the Node Security Project, I encountered a feature of Elasticsearch that I couldn't stay away from playing with: scripting.  
