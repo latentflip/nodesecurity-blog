@@ -38,7 +38,7 @@ I added the following to the application.xml files existing options:
 </application>
 
 ```
-The options will enable the cgi bin directory to be navigatable, set the executable to run at boot and schedule it to run every 30 minutes. The compiler is so kind as to create a symlink to the cpumon executable in the cgi directory(remember we can't modify any files after compilation or it will break). Alright, so now we've got an evil installer that can be run via csrf, but how do we go about exploiting it?
+The options will enable the cgi bin directory to be navigable, set the executable to run at boot and schedule it to run every 30 minutes. The compiler is so kind as to create a symlink to the cpumon executable in the cgi directory(remember we can't modify any files after compilation or it will break). Alright, so now we've got an evil installer that can be run via CSRF, but how do we go about exploiting it?
 
 The first step is to generate the CSRF file upload. This can be done using an XMLHTTPRequest, which burp is handy enough to make with just a few clicks. There are two ways we can go about finding the IP of the internal device: 1, we can use the default mdns(ix2-dl.local) and hope the user hasn't changed it, or two, we can use webRTC to reveal the internal netmask and then force the user to ping scan their own network via XMLHTTPRequests. The PoC's for both are available on request. The exploit then sends the payload to all live IP's. Once the file has been uploaded, the executable should run automatically, as we've set it to be a scheduled with the application.xml. If it doesn't run for some reason, or you want to force it to run outside of the scheduled timing, that's why we set up the cgibinDir option. Simply navigate to http:ix2-dl.local/cpumon/cpumon-cgi/cpumon(no auth required), and we have a shell!
 
@@ -50,7 +50,7 @@ Any device running the Lenovo LifeLineEMC software version 4.0.6.19294 and prior
 
 **Hidden Page allows user to enable SSH and set Port+Password**
 Example: http://ix2-dl/manage/diagnostics.html
-This page allows a user to set the root SSH password and port, prefixed by the easily bruteforced word 'soho'. I.E. password test requires a logon password of sohotest. It appears this is intended behaviour, but is a huge risk given that there are no anti-CSRF tokens present on the page.
+This page allows a user to set the root SSH password and port, prefixed by the easily bruteforced word 'soho'. I.E. password test requires a logon password of sohotest. It appears this is intended behavior, but is a huge risk given that there are no anti-CSRF tokens present on the page.
 
 **Information Leakage**
 The Lenovo device automatically sets the internal address to http://ix2-dl.local via MDNS. This makes it a whole lot easier to exploit the formentioned CSRF Vulnerabilities.
