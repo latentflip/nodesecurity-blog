@@ -13,7 +13,7 @@ So if you are considering adding Authy two-factor support to your application, p
 
 You see, authy.com only requires an email and token to log into your account, effectively allowing anybody with this token access to your account.
 
-![image](http://cl.ly/image/390s253t3T1W/Screen%20Shot%202013-02-03%20at%2011.20.06%20AM.png)
+![image](/images/articles/Screen%20Shot%202013-02-03%20at%2011.20.06%20AM.png)
 
 The tokens that the authy app generates are time based and can be submitted multiple times. The tokens are not tied to any specific web application so a token provided to one web app can be submitted to another Authy enabled application.
 
