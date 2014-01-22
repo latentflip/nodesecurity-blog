@@ -3,6 +3,7 @@
 #tags: lenovo,ix2,csrf,root,shell
 #title: Lenovo IX2 Remote Root(CSRF), Multiple Vulnerabilities
 #type: text
+Jon Lamendola
 
 Over the holidays, we did an internal hackathon. I had access to a Lenovo IX2 NAS device, and I love breaking physical boxes - of course I had to go for it as my target. It's a simple ARM device running LifeLine Linux, a distribution designed by Lenovo to run on their NAS devices, both consumer and enterprise level. Within 5 minutes of opening the box and turning it on, I noticed there's absolutely no CSRF protection on any pages. 
 
