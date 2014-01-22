@@ -2,8 +2,8 @@
 #slug: lenovo-ix2-csrf-root
 #tags: lenovo,ix2,csrf,root,shell
 #title: Lenovo IX2 Remote Root(CSRF), Multiple Vulnerabilities
+#author: Jon Lamendola
 #type: text
-Jon Lamendola
 
 Over the holidays, we did an internal hackathon. I had access to a Lenovo IX2 NAS device, and I love breaking physical boxes - of course I had to go for it as my target. It's a simple ARM device running LifeLine Linux, a distribution designed by Lenovo to run on their NAS devices, both consumer and enterprise level. Within 5 minutes of opening the box and turning it on, I noticed there's absolutely no CSRF protection on any pages. 
 
@@ -11,7 +11,7 @@ So naturally, I spent a good deal of time looking for SQL/Command Injection. I c
 
 
 
-I noticed an 'Applications' page on the device, that allows user to extend the functionality of their NAS device by installing third party apps. I started by trying to upload simple shell/php/cgi scripts, but with no luck. It's pretty picky about the formatting. I then tried to upload a valid third party app available from their lifelineapps store, and noticed it was in a strange .o2 file. After running file on it, turns out it's just a dpkg. 
+I noticed an 'Applications' page on the device, that allows users to extend the functionality of their NAS device by installing third party apps. I started by trying to upload simple shell/php/cgi scripts, but with no luck. It's pretty picky about the formatting. I then tried to upload a valid third party app available from their lifelineapps store, and noticed it was in a strange .o2 file. After running the file command on it, turns out it's just a dpkg. 
 
 I tried modifying files inside it and installing, but at compilation it creates an encrypted md5 hidden somewhere inside the .o2 file, making my modified .o2 invalid. After some searching around, I found the SDK available at http://www.developer.lifelineapps.com, available for the price of an email address. Unfortunately, it's not very well documented, and I didn't have a whole lot of time to figure out how their compiler expects the apps to be built. So I went for plan b - make an evil app from a demo. I downloaded the source for the Resource Monitor app, which is available once you've signed up for the SDK. 
 
