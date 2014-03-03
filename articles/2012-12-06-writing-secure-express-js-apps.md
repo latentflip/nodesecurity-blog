@@ -6,7 +6,7 @@
 #type: text
 
 
-**Update: We understand that having a security process for your development is important to you, that is why we've launched the [Node.js Development Education Series](https://liftsecurity.io/training)**
+**Update: We understand that having education as part of your security process is important, that is why we've launched the in depth and hands on [Node.js Development Education Series](https://liftsecurity.io/training)**
 
 Here is a starting guide for securing express.js applications, specifically Express v3\. It is by no means a comprehensive guide on web application security. Standard rules and practices apply to express.js apps just as if they would to Rails, Django or any other web application.  
   
