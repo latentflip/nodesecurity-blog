@@ -35,4 +35,4 @@ Slides from the talk are [available here](http://www.slideshare.net/evilpacket/n
 ## What have we been working on?
 At Lift Security, we strive to build the best resources and help our community grow with a security culture. We know how hard can it be to bring this mind set to development teams that sometimes, are constantly changing or are constantly tfrustrated as security issues being problems, not solutions. 
 
-This is why we build our new "Node.js Secure Development Education Series", a complete training for you and your team to get around the majority of the security faults in your Node.js Web Application. Sign up today to reserve your spot at https://liftsecurity.io/training!
+This is why we build our new "Node.js Secure Development Education Series", a complete training for you and your team to get around the majority of the security faults in your Node.js Web Application. Sign up today to reserve your spot at https://liftsecurity.io/training
