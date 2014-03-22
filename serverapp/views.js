@@ -109,7 +109,7 @@ exports.index = function (req, res) {
 
 exports.tumblrRedirect = function (req, res) {
     var slug = req.params.tslug;
-    var thisPost = _.findWhere(postData, {fullSlug: slug });
+    var thisPost = _.findWhere(postData, { slug: slug });
     res.redirect(301, thisPost.permalink);
     logger.info(thisPost.permalink);
     logger.info('Request:  ' + req.url + '\n>>>>> Redirect: ' + slug);
