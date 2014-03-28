@@ -7,7 +7,7 @@
 
 The team has been hard at work designing a great training experience and we are proud to announce that the first live edition of the [Node.js Secure Development Training](https://liftsecurity.io/training) will be on April 30, in Portland, OR.
 
-[Reserve your seat today](https://ti.to/lift-security/node-sec-dev-portland?release_id=z0ke5wqhfcs) as this event will have extremely limited seating!
+[Tickets are going to be released on April 1st, register your interest today!](https://ti.to/lift-security/node-sec-dev-portland) As this event will have extremely limited seating!
 
 We've designed this training to help you understand security challenges you will face developing node.js web applications and build habits that turn security from a worry or an annoyance into a comfortable part of your code from the very beginning.
 
@@ -36,5 +36,7 @@ A Training ticket includes:
 - Catered Lunch
 - Afternoon Coffee Break
 - After Training Social
+
+[Register your interest today!](https://ti.to/lift-security/node-sec-dev-portland)
 
 If you can't attend this training and you would like it to happen in your area or bring it to your dev team, please let us know by sending an email to training@liftsecurity.io
