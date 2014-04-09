@@ -31,6 +31,8 @@ Each new developer hire is a potential set of vulnerabilities, patch them with e
 
 Slides from the talk are [available here](http://www.slideshare.net/evilpacket/node-day-enterprise-nodejs-security), [follow us on twitter](https://twitter.com/liftsecurity) to find out when the video is released.
 
+**Update:** The video was just released, you can watch it [here](https://www.youtube.com/watch?v=Zc8QvuRbdoQ).
+
 
 ## What have we been working on?
 At Lift Security, we strive to build the best resources and help our community grow with a security culture. We know how hard can it be to bring this mind set to development teams that sometimes, are constantly changing or are constantly tfrustrated as security issues being problems, not solutions. 
