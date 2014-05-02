@@ -15,9 +15,9 @@ Despite the beautiful weather (especially for Portland), everyone stayed engaged
 We’re really proud of this awesome group of people who spent the day with us to help themselves become better developers than they were the day before.
 
 ![Class Photo](/images/articles/nst1/class.jpg)
-The first class photo. 
+*The first class photo.* 
 
-This session was open to both individual developers and small teams looking to learn together. If you want to bring this training to your company or if you are looking for a customized approach from trainers taking careful consideration of your Node.js stack, email contact@liftsecurity.io and we'll chat.
+This session was open to both individual developers and small teams looking to learn together. If you want to bring this training to your company or if you are looking for a customized approach from trainers taking careful consideration of your Node.js stack, email [contact@liftsecurity.io](mailto:contact@liftsecurity.io) and we’ll chat.
 
 We want to give special thanks to [Tracy Abrahms](https://twitter.com/HackyGoLucky), [Ben Acker](https://twitter.com/nvcexploder), [Adam Ulvi](https://twitter.com/sf5s ), [Amber Case](https://twitter.com/caseorganic), [Anthony Falco](https://twitter.com/antonyfalco) and to [PDXnode](https://twitter.com/PDXnode) for participating and helping us bring the training to the Portland Node Community. Their support was crucial in making this first training happen.
 
