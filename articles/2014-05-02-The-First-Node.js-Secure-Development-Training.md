@@ -19,7 +19,7 @@ The first class photo.
 
 This edition was open to individual developers or small teams to join and learn together, if you want to bring this training to your company or if you are looking for a customized version, taking in consideration your Node.js stack, please send us an email to contact@liftsecurity.io 
 
-We want to make a special thanks to [Tracy Abrahms](https://twitter.com/HackyGoLucky), [Ben Acker](https://twitter.com/nvcexploder), [Adam Ulvi](https://twitter.com/sf5s ), [Amber Case](https://twitter.com/caseorganic), [Anthony Falco](https://twitter.com/antonyfalco) and to [PDXnode](https://twitter.com/PDXnode) for being part and helping us bring the training to the Portland Node Community, their support was indispensable to make it happen.
+We want to give special thanks to [Tracy Abrahms](https://twitter.com/HackyGoLucky), [Ben Acker](https://twitter.com/nvcexploder), [Adam Ulvi](https://twitter.com/sf5s ), [Amber Case](https://twitter.com/caseorganic), [Anthony Falco](https://twitter.com/antonyfalco) and to [PDXnode](https://twitter.com/PDXnode) for being part and helping us bring the training to the Portland Node Community, their support was indispensable to make it happen.
 
 The curated experience and the [incredible swag](/images/articles/nst1/cert.jpg) wouldn't be possible without the support our fantastic team at [&yet](http://andyet.com/), a big <3 to [Jenn](andyet.com/team/jenn), [Amy](http://andyet.com/team/amy) and [Mel](http://andyet.com/team/mel) for orchestrating this amazing journey with us.
 
