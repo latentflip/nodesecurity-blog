@@ -28,12 +28,6 @@ ul
       list-style-type: none
       padding: 0 15px
 
-      &:first-child
-        padding-left: 0
-
-      &:last-child
-        padding-right: 0
-
 ol
   li
     list-style-type: decimal
@@ -43,3 +37,13 @@ dl
     font-weight: bold
   dd
     margin: 0
+
+@media $desktop
+
+  ul.unstyled li
+    
+    &:first-child
+      padding-left: 0
+
+    &:last-child
+      padding-right: 0

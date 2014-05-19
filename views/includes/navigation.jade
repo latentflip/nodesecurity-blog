@@ -1,6 +1,10 @@
-nav(role='navigation')
-  h1.pull-left: a.logo(href='http://liftsecurity.io', title='^Lift Security') ^Lift Security
-  ul.pull-right.unstyled
+h1.pull-left: a.logo(href='http://liftsecurity.io', title='^Lift Security') ^Lift Security
+nav.pull-right.cf(role='navigation')
+
+  label(for='menu-toggle') Menu
+  input(type='checkbox', id='menu-toggle')
+
+  ul.unstyled
     li: a(href='http://liftsecurity.io/training', title='Training') Training
     li: a(href='http://liftsecurity.io/advisories', title='Advisories') Advisories
     li: a(href='http://liftsecurity.io/team', title='Team') Team

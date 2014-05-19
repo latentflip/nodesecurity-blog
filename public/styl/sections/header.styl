@@ -5,18 +5,68 @@
 --------------------------------------------------------------------*/
 
 header
+  
+  nav
 
+    a, label
+      font-weight: 400
+      font-family: $font-sans
+  
   .logo
     display: block
+    height: 50px
     background: url('/images/logo.svg') 0 0 no-repeat
     background-size: contain
     text-indent: -9999rem
 
     &:hover
-      opacity: .5
+      opacity: .8
       transition: opacity .5s ease
 
-  nav
-    a
-      font-weight: 400
-      font-family: $font-sans
+  input[type=checkbox]
+    display: none    
+
+@media $desktop
+
+  header
+
+    nav
+      a
+        line-height: 125px
+
+    label
+      display: none
+
+@media $mobile-devices
+
+  header
+    
+    nav.pull-right
+      float: none
+      text-aling: right
+    
+    label
+      display: block
+      line-height: 125px
+      text-align: right
+      color: $blue
+      cursor: pointer
+
+    ul.unstyled
+      display: none
+
+      li
+        display: block
+        padding: 0 20px
+        width: 100%
+        border-bottom: 1px solid $gray-lighter
+
+      a
+        line-height: 50px
+
+    input[type=checkbox]:checked ~ ul.unstyled
+      display: block
+      width: 100%
+
+
+
