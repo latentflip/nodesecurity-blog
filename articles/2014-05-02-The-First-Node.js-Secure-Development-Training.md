@@ -8,6 +8,7 @@
 Just a few days ago the ^Lift Security team hosted the first Node.js Secure Development Training in Portland, OR. This training effort is the culmination of years helping teams to ship better, more secure code, exposing best practices and techniques, and helping developers be more confident in themselves while building web apps.
 
 The training was hosted at The Cleaners, an amazing space in downtown Portland. 
+
 ![The Cleaners](/images/articles/nst1/cleaners.jpg)
 
 Despite the beautiful weather (especially for Portland), everyone stayed engaged, learning about how to find, exploit and fix many different kinds of vulnerabilities that often plague web apps. 

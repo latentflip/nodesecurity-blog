@@ -1,11 +1,11 @@
-.post
+article.post
   h2
     a.permalink(href=post.url)= post.title
   h3= post.subtitle
   | !{post.postBody}
-  p.postmeta
+  .postmeta
     if Object.keys(post.tags).length > 0
-      span.tags
+      .tags
         | filed under 
         each tag, slug in post.tags
           if (slug === post.lastTag) && (post.tagCount > 1)
@@ -15,8 +15,8 @@
             | , 
           else
             |  
-  span.byline
-    | posted&nbsp;
-    a.permalink(href=post.url)= post.formattedDate
-    | &nbsp;by&nbsp;
+  .byline
+    | posted 
+    a.permalink(href=post.url)= post.formattedDate 
+    | &nbsp;by 
     a.author(href='/#{post.author_slug}')= post.author
