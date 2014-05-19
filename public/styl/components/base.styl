@@ -9,10 +9,19 @@
   -webkit-box-sizing: border-box
   box-sizing: border-box
 
+::-moz-selection
+  background-color: $blue
+  color: white
+
+::selection
+  background-color: $blue
+  color: white
+
 html
   font-size: 100%
 
 body
+  color: $gray-darker
   font: 400 $font-base/$line-height-base $font-serif
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
@@ -46,7 +55,18 @@ small
   font-size: $font-small
 
 a
+  text-decoration: none
   cursor: pointer
+
+  &:focus
+    outline: none
+
+a:not(.button)
+  color: $blue
+
+  &:hover
+    color: darken($blue, 30%)
+    transition: color .5s ease
 
 .cf
   &:before,
