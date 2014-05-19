@@ -85,3 +85,18 @@ a:not(.button)
 
 img, video, iframe
   max-width: 100%
+
+.wrapper
+  margin: 0 auto
+
+@media $mobile-devices
+  .wrapper
+    width: 90%
+
+@media $desktop
+  .wrapper
+    width: 75%
+
+@media $desktop-wide
+  .wrapper
+    width: 65%
