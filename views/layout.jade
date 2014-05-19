@@ -1,56 +1,52 @@
-!!!5
-html
+doctype html
+html(lang='en')
+
   head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+
     - if (locals.pageTitle)
       title!= locals.pageTitle + ' | ' + locals.blogTitle
     - else
-      title= locals.blogTitle
-    meta(http-equiv='Content-Type', content='text/html;charset=utf-8')
-    link(rel='shortcut icon', href='/images/favicon.ico')
+      title= locals.blogTitle     
+
+    link(rel='icon', type='image/png', href='images/favicon.png')
     link(rel='alternate', type='application/atom+xml', title='^lift security | the blog', href='http://blog.liftsecurity.io/rss')
-    //if IE 6
-      script(src='/js/DD_belatedPNG_0.0.8a-min.js')
-      script
-        DD_belatedPNG.fix('#bar_wrapper, #logo, #index, #contentwrapper, #twitter, #index, #contentwrapper, #content, #twitter_icon, #feed_icon, .focus_title');
-      link(rel='stylesheet', type='text/css', href='css/ie6.css')
-      script(src='/js/fixed.js')
-    //if IE 7
-      link(rel='stylesheet', type='text/css', href='css/ie7.css')
-  body#blog
-    #wrapper
-      #head_wrapper
-        h1#logo
-          a(href='/') ^lift security
-        #menu_wrapper
-          ul#uber_menu
-            li
-              a(href='http://liftsecurity.io') About us
-            li
-              a(href='http://liftsecurity.io/training') Training  
-            li
-              a(href='http://liftsecurity.io/advisories') Advisories
-            li
-              a(href='mailto:contact@liftsecurity.io') Contact
 
-      #contentwrapper
-        #content
-            h1
-              a(href='/')= locals.pageTitle || locals.blogTitle
-            #post_column.col
-              block content
+    link(rel='stylesheet', href='css/normalize.css')
+    link(rel='stylesheet', href='css/main.css')
 
-              block pagination
-                include includes/pagination
-            #side_column.col
-              a#twitter(href='http://twitter.com/liftsecurity') Follow us on Twitter
-              h4 ^Lift Security: 
-                span.byline Secure apps are happy apps.
-              p
-                | Find out more at 
-                a(href="http://liftsecurity.io") liftsecurity.io
-              include includes/archive_nav
+  body
 
-              include includes/tag_list
-            .clear
-      
-      script(src='/js/google.js')
+    header
+
+      nav(role='navigation')
+        h1 ^Lift Security
+        ul
+          li: a(href='') Training
+          li: a(href='') Advisories
+          li: a(href='') Team
+          li: a(href='') Blog
+          li: a(href='') Contact
+
+    .wrapper
+
+      .content(role='main')
+        h1
+          a(href='/')= locals.pageTitle || locals.blogTitle
+        
+        #post_column
+          block content
+
+          block pagination
+            include includes/pagination
+
+      aside(role='complementary')
+
+        include includes/archive_nav
+        include includes/tag_list
+
+    script(src='/js/google.js')
