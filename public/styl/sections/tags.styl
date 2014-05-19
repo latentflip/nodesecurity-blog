@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------------
+*
+* BLOG TAGS
+*
+--------------------------------------------------------------------*/
+
+.taglist
+
+  a
+    display: inline-block
+    border-radius: 3px
+    background-color: $blue-lighter
+    font: 400 $font-small $font-sans
+
+    &:hover
+      background-color: $blue-light
+      transition: background-color .5s ease-in
+
+@media $desktop
+
+  .taglist a
+    margin: 5px 2px
+    padding: 5px 8px
+
+@media $mobile-devices
+
+  .taglist a
+    margin: 5px 3px
+    padding: 8px 10px

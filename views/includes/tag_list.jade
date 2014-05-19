@@ -1,5 +1,5 @@
 h4 Tag categories
-p.taglist
+.taglist
   each tag, slug in allTags
     a(href='/tag/#{slug}', alt='#{tag}', title='#{tag}') !{tag.replace(' ', '&nbsp;')}
     | 
