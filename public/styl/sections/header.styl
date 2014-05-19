@@ -14,7 +14,6 @@ header
   
   .logo
     display: block
-    height: 50px
     background: url('/images/logo.svg') 0 0 no-repeat
     background-size: contain
     text-indent: -9999rem
@@ -47,7 +46,6 @@ header
     
     label
       display: block
-      line-height: 125px
       text-align: right
       color: $blue
       cursor: pointer
@@ -68,5 +66,22 @@ header
       display: block
       width: 100%
 
+@media $tablet
 
+  header
+    label
+      line-height: 125px
 
+@media $smartphone
+
+  .logo
+    height: 30px
+
+  header
+    label
+      line-height: 100px
+
+@media (min-width: 481px)
+
+  .logo
+    height: 50px
