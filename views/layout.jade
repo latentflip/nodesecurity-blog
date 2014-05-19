@@ -23,14 +23,7 @@ html(lang='en')
 
     header
 
-      nav(role='navigation')
-        h1 ^Lift Security
-        ul
-          li: a(href='') Training
-          li: a(href='') Advisories
-          li: a(href='') Team
-          li: a(href='') Blog
-          li: a(href='') Contact
+      include includes/navigation
 
     .wrapper
 
@@ -48,5 +41,9 @@ html(lang='en')
 
         include includes/archive_nav
         include includes/tag_list
+
+      footer
+
+        include includes/footer
 
     script(src='/js/google.js')
