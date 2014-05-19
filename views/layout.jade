@@ -13,35 +13,36 @@ html(lang='en')
     - else
       title= locals.blogTitle     
 
-    link(rel='icon', type='image/png', href='images/favicon.png')
+    link(rel='icon', type='image/png', href='/images/favicon.png')
     link(rel='alternate', type='application/atom+xml', title='^lift security | the blog', href='http://blog.liftsecurity.io/rss')
 
     link(rel='stylesheet', href='//cloud.typography.com/7773252/779464/css/fonts.css')
 
-    link(rel='stylesheet', href='css/normalize.min.css')
-    link(rel='stylesheet', href='css/main.min.css')
+    link(rel='stylesheet', href='/css/normalize.min.css')
+    link(rel='stylesheet', href='/css/main.min.css')
 
   body
 
-    .wrapper
-      
+    .wrapper.page-blog
+
       header.cf(role='banner')
         include includes/navigation
 
-      .content(role='main')
-        h1
-          a(href='/')= locals.pageTitle || locals.blogTitle
-        
-        #post_column
-          block content
+      .cf
 
-          block pagination
-            include includes/pagination
+        .content(role='main')
+          h1= locals.pageTitle || locals.blogTitle
+          
+          #post_column
+            block content
 
-      aside(role='complementary')
+            block pagination
+              include includes/pagination
 
-        include includes/archive_nav
-        include includes/tag_list
+        aside(role='complementary')
+
+          include includes/archive_nav
+          include includes/tag_list
 
       block footer
 
