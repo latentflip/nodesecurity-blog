@@ -16,7 +16,10 @@
     &:not(:last-of-type)
       border-bottom: 1px solid $gray-lighter
 
-    h2
+    &:last-of-type
+      margin: 0
+
+    h2:first-of-type
       margin-bottom: 0
 
     h3:empty
@@ -37,3 +40,10 @@
 
   .byline
     background: url('/images/icon-calendar.svg') no-repeat 3px 0
+
+  #pagination
+    padding-bottom: 50px
+    text-align: center
+
+    p
+      margin: 0
