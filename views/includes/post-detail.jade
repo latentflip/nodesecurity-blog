@@ -2,6 +2,11 @@ article.post
   h2
     a.permalink(href=post.url)= post.title
   h3= post.subtitle
+  .byline
+    | posted 
+    a.permalink(href=post.url)= post.formattedDate 
+    | &nbsp;by 
+    a.author(href='/#{post.author_slug}')= post.author
   | !{post.postBody}
   .postmeta
     if Object.keys(post.tags).length > 0
@@ -15,8 +20,3 @@ article.post
             | , 
           else
             |  
-  .byline
-    | posted 
-    a.permalink(href=post.url)= post.formattedDate 
-    | &nbsp;by 
-    a.author(href='/#{post.author_slug}')= post.author

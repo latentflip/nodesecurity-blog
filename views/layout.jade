@@ -29,9 +29,10 @@ html(lang='en')
         include includes/navigation
 
       .cf
-
+        
+        h1= locals.pageTitle || locals.blogTitle
+        
         .content(role='main')
-          h2= locals.pageTitle || locals.blogTitle
           
           #post_column
             block content
