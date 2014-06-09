@@ -1,9 +1,11 @@
-#date: 2013-02-05 00:38:00 GMT
-#slug: authy-two-factor-dashboard-security
-#tumblr_post_url: http://blog.liftsecurity.io/post/42313703061/authy-two-factor-dashboard-security
-#tags: two-factor, auth
-#title: Authy Two-Factor Dashboard Security
-#type: text
+---
+date: 2013-02-05 00:38:00 GMT
+slug: authy-two-factor-dashboard-security
+tumblr_post_url: http://blog.liftsecurity.io/post/42313703061/authy-two-factor-dashboard-security
+tags: two-factor, auth
+title: Authy Two-Factor Dashboard Security
+type: text
+---
 
 [Authy][0] is a useful service for adding two-factor authentication to any app.
 

@@ -1,9 +1,11 @@
-#date: 2014-03-28 00:04:34 GMT
-#slug: Secure-Node.js-Training-Coming-to-Portland
-#tags: security, education, training, node.js, enterprise
-#title: The 1st Node.js Secure Development Training is coming to Portland
-#author: Lift Security Team
-#type: text
+---
+date: 2014-03-28 00:04:34 GMT
+slug: Secure-Node.js-Training-Coming-to-Portland
+tags: security, education, training, node.js, enterprise
+title: The 1st Node.js Secure Development Training is coming to Portland
+author: Lift Security Team
+type: text
+---
 
 The team has been hard at work designing a great training experience and we are proud to announce that the first live edition of the [Node.js Secure Development Training](https://liftsecurity.io/training) will be on April 30, in Portland, OR.
 

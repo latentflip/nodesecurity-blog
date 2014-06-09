@@ -1,10 +1,11 @@
-#date: 2014-03-03 00:04:34 GMT
-#slug: Node-Day-Summary-Node.js-Security-in-the-Enterprise
-#tags: nodeday, node.js, security, enterprise, education, training
-#title: Node Day Summary - Node.js Security in the Enterprise
-#author: Lift Security Team
-#type: text
-
+---
+date: 2014-03-03 00:04:34 GMT
+slug: Node-Day-Summary-Node.js-Security-in-the-Enterprise
+tags: nodeday, node.js, security, enterprise, education, training
+title: Node Day Summary - Node.js Security in the Enterprise
+author: Lift Security Team
+type: text
+---
 
 We just came from Node Day and what an amazing event.
 

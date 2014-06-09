@@ -1,9 +1,11 @@
-#date: 2014-05-02 00:04:34 GMT
-#slug: Secure-Node.js-Training-Coming-to-Portland
-#tags: security, education, training, node.js, enterprise
-#title: The first Node.js Secure Development Training
-#author: ^Lift Security Team
-#type: text
+---
+date: 2014-05-02 00:04:34 GMT
+slug: Secure-Node.js-Training-Coming-to-Portland
+tags: security, education, training, node.js, enterprise
+title: The first Node.js Secure Development Training
+author: ^Lift Security Team
+type: text
+---
 
 Just a few days ago the ^Lift Security team hosted the first Node.js Secure Development Training in Portland, OR. This training effort is the culmination of years helping teams to ship better, more secure code, exposing best practices and techniques, and helping developers be more confident in themselves while building web apps.
 

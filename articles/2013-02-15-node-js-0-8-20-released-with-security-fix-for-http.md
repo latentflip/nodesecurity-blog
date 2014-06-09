@@ -1,9 +1,11 @@
-#date: 2013-02-16 02:14:00 GMT
-#slug: node-js-0-8-20-released-with-security-fix-for-http
-#tumblr_post_url: http://blog.liftsecurity.io/post/43192873488/node-js-0-8-20-released-with-security-fix-for-http
-#tags: nodesecurity, response splitting, node.js
-#title: Node.js 0.8.20 Released with Security fix for HTTP Response Splitting Fix
-#type: text
+---
+date: 2013-02-16 02:14:00 GMT
+slug: node-js-0-8-20-released-with-security-fix-for-http
+tumblr_post_url: http://blog.liftsecurity.io/post/43192873488/node-js-0-8-20-released-with-security-fix-for-http
+tags: nodesecurity, response splitting, node.js
+title: Node.js 0.8.20 Released with Security fix for HTTP Response Splitting Fix
+type: text
+---
 
 [Node.js 0.8.20][0] was just released and contains a security fix for response splitting.
 

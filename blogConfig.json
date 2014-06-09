@@ -1,7 +1,7 @@
 {
-  "blogTitle": "",
+  "blogTitle": "^Lift Security Blog",
   "blogSubtitle": "",
-  "blogAuthor": "Adam Baldwin",
+  "blogAuthor": "^Lift Security Team",
   "blogAuthorEmail": "contact@liftsecurity.io",
   "blogBio": "",
   "siteUrl": "http://blog.liftsecurity.io",
@@ -9,5 +9,7 @@
   "postDir": "./articles",
   "uploadDir": "uploads",
   "blogHome": "/",
-  "maxPosts": 10
+  "maxPosts": 10,
+  "browserCache": 3600000
 }
+

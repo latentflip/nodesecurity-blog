@@ -1,9 +1,11 @@
-#date: 2012-11-14 18:34:00 GMT
-#slug: filesystem-enumeration-using-redis-and-lua
-#tumblr_post_url: http://blog.liftsecurity.io/post/35714931664/filesystem-enumeration-using-redis-and-lua
-#tags: redis, lua, security
-#title: Filesystem Enumeration using Redis and Lua
-#type: text
+---
+date: 2012-11-14 18:34:00 GMT
+slug: filesystem-enumeration-using-redis-and-lua
+tumblr_post_url: http://blog.liftsecurity.io/post/35714931664/filesystem-enumeration-using-redis-and-lua
+tags: redis, lua, security
+title: Filesystem Enumeration using Redis and Lua
+type: text
+---
 
 [Redis 2.6][0] was recently released by [Antirez][1] at the end of [RedisConf][2]. One of the major features that comes with 2.6 is embedded [Lua scripting][3].   
   

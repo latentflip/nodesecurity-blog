@@ -1,9 +1,11 @@
-#date: 2012-08-03 00:04:34 GMT
-#slug: mistakes-keep-calm-carry-on
-#tumblr_post_url: http://blog.liftsecurity.io/post/28590585069/mistakes-keep-calm-carry-on
-#tags: security, process, do better
-#title: Mistakes! Keep Calm & Carry On
-#type: text
+---
+date: 2012-08-03 00:04:34 GMT
+slug: mistakes-keep-calm-carry-on
+tumblr_post_url: http://blog.liftsecurity.io/post/28590585069/mistakes-keep-calm-carry-on
+tags: security, process, do better
+title: Mistakes! Keep Calm & Carry On
+type: text
+---
 
 There is this gut wrenching feeling when I come across a post that mentions a vulnerability in a site that I have done an assessment for. If you perform web application assessments chances are you have experienced the same cringe-worthy feeling.   
   

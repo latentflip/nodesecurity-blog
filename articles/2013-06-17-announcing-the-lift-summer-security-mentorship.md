@@ -1,9 +1,11 @@
-#date: 2013-06-17 17:24:32 GMT
-#slug: announcing-the-lift-summer-security-mentorship
-#tumblr_post_url: http://blog.liftsecurity.io/post/53206361458/announcing-the-lift-summer-security-mentorship
-#tags: mentorship
-#title: Announcing the ^Lift Summer Security Mentorship
-#type: text
+---
+date: 2013-06-17 17:24:32 GMT
+slug: announcing-the-lift-summer-security-mentorship
+tumblr_post_url: http://blog.liftsecurity.io/post/53206361458/announcing-the-lift-summer-security-mentorship
+tags: mentorship
+title: Announcing the ^Lift Summer Security Mentorship
+type: text
+---
 
 I grew up in a very small farming community and was drawn to technology at a young age. After getting caught hacking into the local BBS when I was 16, instead of getting in trouble I was given an amazing opportunity (which I didn't realize until much later in life).
 

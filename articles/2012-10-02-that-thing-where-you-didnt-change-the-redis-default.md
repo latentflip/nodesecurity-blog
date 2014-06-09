@@ -1,9 +1,11 @@
-#date: 2012-10-03 00:24:00 GMT
-#slug: that-thing-where-you-didnt-change-the-redis-default
-#tumblr_post_url: http://blog.liftsecurity.io/post/32770744557/that-thing-where-you-didnt-change-the-redis-default
-#tags: Redis, secure defaults, ec2
-#title: That thing where you didn't change the Redis default config...
-#type: text
+---
+date: 2012-10-03 00:24:00 GMT
+slug: that-thing-where-you-didnt-change-the-redis-default
+tumblr_post_url: http://blog.liftsecurity.io/post/32770744557/that-thing-where-you-didnt-change-the-redis-default
+tags: Redis, secure defaults, ec2
+title: That thing where you didn't change the Redis default config...
+type: text
+---
 
 One of the best ways you can secure your [Redis][0] instance is to make it listen only on the localhost interface, or firewall it from the rest of the Internet.  
 

@@ -1,10 +1,11 @@
-#date: 2012-12-07 05:41:00 GMT
-#slug: writing-secure-express-js-apps
-#tumblr_post_url: http://blog.liftsecurity.io/post/37388272578/writing-secure-express-js-apps
-#tags: express.js, csrf, privileges, sessions, headers, node.js
-#title: Writing secure express.js apps
-#type: text
-
+---
+date: 2012-12-07 05:41:00 GMT
+slug: writing-secure-express-js-apps
+tumblr_post_url: http://blog.liftsecurity.io/post/37388272578/writing-secure-express-js-apps
+tags: express.js, csrf, privileges, sessions, headers, node.js
+title: Writing secure express.js apps
+type: text
+---
 
 **Update: We understand that having education as part of your security process is important, that is why we've launched the in depth and hands on [Node.js Development Education Series](https://liftsecurity.io/training)**
 

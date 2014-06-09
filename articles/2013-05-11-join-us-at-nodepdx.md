@@ -1,9 +1,11 @@
-#date: 2013-05-11 20:21:45 GMT
-#slug: join-us-at-nodepdx
-#tumblr_post_url: http://blog.liftsecurity.io/post/50191653353/join-us-at-nodepdx
-#tags: nodepdx, conference
-#title: Join us at NodePDX
-#type: text
+---
+date: 2013-05-11 20:21:45 GMT
+slug: join-us-at-nodepdx
+tumblr_post_url: http://blog.liftsecurity.io/post/50191653353/join-us-at-nodepdx
+tags: nodepdx, conference
+title: Join us at NodePDX
+type: text
+---
 
 We are proud to be sponsoring [NodePDX][0] this next week in Portland, OR.
 

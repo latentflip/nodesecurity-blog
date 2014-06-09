@@ -1,9 +1,11 @@
-#date: 2013-04-03 17:33:00 GMT
-#slug: quickly-audit-s3-bucket-permissions
-#tumblr_post_url: http://blog.liftsecurity.io/post/47033610732/quickly-audit-s3-bucket-permissions
-#tags: Amazon, S3, Permissions
-#title: Quickly Audit S3 Bucket Permissions
-#type: text
+---
+date: 2013-04-03 17:33:00 GMT
+slug: quickly-audit-s3-bucket-permissions
+tumblr_post_url: http://blog.liftsecurity.io/post/47033610732/quickly-audit-s3-bucket-permissions
+tags: Amazon, S3, Permissions
+title: Quickly Audit S3 Bucket Permissions
+type: text
+---
 
 One of my co-workers pointed me to an article about [scanning S3 for open buckets][0] and asked how our own S3 infrastructure looked. After reading about how easy it was, for anyone who wants to find, to discover and inspect S3 buckets in the wild in that post made me think about how hard it is to routinely audit S3 data.
 

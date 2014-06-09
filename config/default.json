@@ -1,0 +1,14 @@
+{
+  "baseUrl": "https://localhost:3000",
+  "hapi": {
+    "host": "127.0.0.1",
+    "port": "3000"
+  },
+  "electricfence": {
+    "path": "public",
+    "url": "/",
+    "listing": "true",
+    "index": "false",
+    "cache": "3600000"
+  }
+}

@@ -1,9 +1,11 @@
-#date: 2012-10-01 23:49:00 GMT
-#slug: why-dont-more-developers-use-content-security-policy
-#tumblr_post_url: http://blog.liftsecurity.io/post/32699583470/why-dont-more-developers-use-content-security-policy
-#tags: 
-#title: Why don’t more developers use Content Security Policy?
-#type: text
+---
+date: 2012-10-01 23:49:00 GMT
+slug: why-dont-more-developers-use-content-security-policy
+tumblr_post_url: http://blog.liftsecurity.io/post/32699583470/why-dont-more-developers-use-content-ecurity-policy
+tags: 
+title: Why don’t more developers use Content Security Policy?
+type: text
+---
 
 A question that has been on my mind lately is why don't more web developers implement Content Security Policy (CSP)? I think the same of other security headers, but I'm going to try and keep this focused.  
   

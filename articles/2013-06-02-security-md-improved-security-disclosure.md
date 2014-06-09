@@ -1,9 +1,11 @@
-#date: 2013-06-02 23:31:00 GMT
-#slug: security-md-improved-security-disclosure
-#tumblr_post_url: http://blog.liftsecurity.io/post/52010883123/security-md-improved-security-disclosure
-#tags: security, security.md, jsconf, communication
-#title: SECURITY.md - Improved Security Disclosure Communication
-#type: text
+---
+date: 2013-06-02 23:31:00 GMT
+slug: security-md-improved-security-disclosure
+tumblr_post_url: http://blog.liftsecurity.io/post/52010883123/security-md-improved-security-disclosure
+tags: security, security.md, jsconf, communication
+title: SECURITY.md - Improved Security Disclosure Communication
+type: text
+---
 
 During [my][0] JSConf 2013 talk on Builders vs. Breakers I suggested that one way developers can communicate with breakers (security researchers) better would be to include a SECURITY.md file with their projects. Often times it's difficult for security researchers to find out how to contact a project. This helps ensure issues are sent to you, the developer or company, instead of just put out there publicly (unless that's what you want).
 
