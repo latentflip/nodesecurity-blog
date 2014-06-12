@@ -6,9 +6,9 @@ block content
       a.permalink(href=postData.url)= postData.title
     h3= postData.subtitle
     .byline
-      | posted
+      | posted 
       a.permalink(href=postData.url)= postData.formattedDate
-      | &nbsp;by
+      | &nbsp;by 
       a.author(href='/authors/#{postData.authorSlug}')= postData.author
     | !{postData.postBody}
     .postmeta
