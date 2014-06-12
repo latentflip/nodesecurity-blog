@@ -1,12 +1,15 @@
 var Hapi = require('hapi');
 var config = require('config');
-var blogConfig = require('./blogConfig.json');
+var jade = require('jade');
+var bumble = require('bumble');
+var bumbleOptions = require('./blogConfig.json');
+
 
 var server = new Hapi.Server(config.hapi.host, config.hapi.port || process.env.PORT);
 
 server.views({
     engines: {
-        jade: 'jade'
+        jade: jade
     },
     path: 'views',
 });
@@ -44,9 +47,11 @@ server.route({
     }
 });
 
-server.pack.require({
-    //'electricfence': config.electricfence,
-    'bumble': blogConfig
+server.pack.register({
+    plugin: bumble,
+    name: "bumble",
+    options: bumbleOptions
+    
 }, function (err) {
     if (err) throw err;
 
