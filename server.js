@@ -11,11 +11,43 @@ server.views({
     path: 'views',
 });
 
+server.route({
+    method: 'GET',
+    path: '/images/{path*}',
+    handler: {
+        directory: {
+            path: 'public/images',
+            index: false
+        }
+    }
+});
+
+server.route({
+    method: 'GET',
+    path: '/css/{path*}',
+    handler: {
+        directory: {
+            path: 'public/css',
+            index: false
+        }
+    }
+});
+
+server.route({
+    method: 'GET',
+    path: '/js/{path*}',
+    handler: {
+        directory: {
+            path: 'public/js',
+            index: false
+        }
+    }
+});
+
 server.pack.require({
-    'electricfence': config.electricfence,
+    //'electricfence': config.electricfence,
     'bumble': blogConfig
 }, function (err) {
-//    console.log(server._router.routes);
     if (err) throw err;
 
     server.start(function () {
