@@ -2,6 +2,7 @@
   h4 Tag categories
   .taglist
     each tag, slug in allTagMap
-      a(href='/tag/#{slug}', alt='#{tag}', title='#{tag}') !{tag.replace(' ', '&nbsp;')}
-      | 
+      - if (tag && slug)
+        a(href='/tag/#{slug}', alt='#{tag}', title='#{tag}') !{tag.replace(' ', '&nbsp;')}
+        | 
 
