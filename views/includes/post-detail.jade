@@ -1,22 +1,22 @@
 article.post
   h2
-    a.permalink(href=post.url)= post.title
-  h3= post.subtitle
+    a.permalink(href=postData.url)= postData.title
+  h3= postData.subtitle
   .byline
     | posted 
-    a.permalink(href=post.url)= post.formattedDate 
+    a.permalink(href=postData.url)= postData.formattedDate 
     | &nbsp;by 
-    a.author(href='/#{post.author_slug}')= post.author
-  | !{post.postBody}
+    a.author(href='/#{postData.author_slug}')= postData.author
+  | !{postData.postBody}
   .postmeta
-    if Object.keys(post.tags).length > 0
+    if Object.keys(postData.tags).length > 0
       .tags
         | filed under 
-        each tag, slug in post.tags
-          if (slug === post.lastTag) && (post.tagCount > 1)
+        each tag, slug in postData.tags
+          if (slug === postData.lastTag) && (postData.tagCount > 1)
             | and 
           a(href='/tag/'+slug, alt=tag, title=tag) #{tag}
-          if (slug !== post.lastTag) && (post.tagCount > 2)
+          if (slug !== postData.lastTag) && (postData.tagCount > 2)
             | , 
           else
             |  
