@@ -14,13 +14,12 @@ block content
     .postmeta
       if (postData.tags).length > 0
         .tags
-          | filed under
+          | filed under 
           each tag, slug in postData.tagMap
             if (slug === postData.lastTag) && (postData.tagCount > 1)
-            | and
+              | and 
             a(href='/tag/'+slug, alt=tag, title=tag) #{tag}
             if (slug !== postData.lastTag) && (postData.tagCount > 2)
               | ,
             else
               | 
-
