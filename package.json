@@ -9,7 +9,7 @@
   "description": "The Blog",
   "dependencies": {
     "bucker": "^1.0.10",
-    "bumble": "^2.0.3",
+    "bumble": "^2.0.4",
     "config": "^0.4.36",
     "connect-githubhook": "^0.1.2",
     "electricfence": "0.0.3",
