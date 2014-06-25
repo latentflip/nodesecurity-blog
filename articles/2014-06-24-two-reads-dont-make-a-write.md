@@ -7,9 +7,11 @@ author: Tom Steele
 type: text
 ---
 
-Key-value data stores are a large part of modern application development, and growing in popularity. Solutions like Riak, LevelDB, MongoDB, etc. give you increased flexibility and development efficiency, as well as other benefits which have been covered and discussed extensively. With the benefits also come weaknesses, or maybe a better word is differences. One of which can result in an incredibly devastating vulnerability. 
+Database race conditions are hard to identify and tricky to exploit, but if an attacker is able to leverage this weakeness, the results can be devastating. [Flexcoin](http://flexcoin.com/) had such a weakness in their application, and allowed an attacker to steal enough bitcoins that they were forced to shutdown, more information on this specific situation is available [here](http://hackingdistributed.com/2014/04/06/another-one-bites-the-dust-flexcoin/).
 
-Database race conditions can occur no matter what backend solution you choose. Traditional databases support [transactions](http://en.wikipedia.org/wiki/Database_transaction) to prevent them. But most key-value data stores do not have such mechanisms. This is well known, and in many cases is not deal breaker. But it is important to understand when this should be a requirement, or at least when a compensating control is needed. 
+Race conditions can occur no matter what backend solution you choose. Traditional databases support [transactions](http://en.wikipedia.org/wiki/Database_transaction) to prevent them. But most key-value data stores do not have such mechanisms. This is well known, and in many cases is not deal breaker. But it is important to understand when this should be a requirement, or at least when a compensating control is needed. 
+
+Key-value data stores are a large part of modern application development, and growing in popularity. Solutions like Riak, LevelDB, MongoDB, etc. give you increased flexibility and development efficiency, as well as other benefits which have been covered and discussed extensively. With the benefits also come weaknesses, or maybe a better word is differences.
 
 Rather than writing a long explanation centered around a theoretical situation, I decided to write a tiny application to quickly demonstrate this vulnerability. Enter [raceybank](https://github.com/tomsteele/raceybank), a little Node application with a LevelDB backend. This is incredibly simple and somewhat silly, but it demonstrates the issue well.
 
