@@ -101,7 +101,7 @@ function handleTransfer(request, reply) {
 It's a bit of code, but the gist is we read two users from the database, validate the transferrer has the requested amount of funds, decrement from transferrer, increment transferee's funds, and save the user records. Once we have the application started, we can see that some seed data has been initialized by calling `GET /users` (note: you would never want to return this much information, but this is a demo).
 
 ~~~~~shell
-$ curl http://localhost:3000/users | python -mjson.tool0
+$ curl http://localhost:3000/users | python -mjson.tool
 [
     {
         "id": "0000000001",
