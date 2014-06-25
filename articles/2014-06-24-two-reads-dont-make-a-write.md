@@ -9,11 +9,13 @@ type: text
 
 Key-value data stores are a large part of modern application development, and growing in popularity. Solutions like Riak, LevelDB, MongoDB, etc. give you increased flexibility and development efficiency, as well as other benefits which have been covered and discussed extensively. With the benefits also come weaknesses, or maybe a better word is differences. One of which can result in an incredibly devastating vulnerability. 
 
-Database race conditions can occur no matter what backend solution you choose. Traditional databases support [transactions](http://en.wikipedia.org/wiki/Database_transaction) to prevent them. But most key-value data stores do not have such mechanisms. This is well known, and in many cases is not deal breaker. But it is important to understand when this should be a requirement, or at least when a compensation is needed. 
+Database race conditions can occur no matter what backend solution you choose. Traditional databases support [transactions](http://en.wikipedia.org/wiki/Database_transaction) to prevent them. But most key-value data stores do not have such mechanisms. This is well known, and in many cases is not deal breaker. But it is important to understand when this should be a requirement, or at least when a compensating control is needed. 
 
-Rather than a writing a long explanation centered around a theoretical situation I decided to write a quick demo application. Enter [raceybank](https://github.com/tomsteele/raceybank). A little Node application with a LevelDB backend.
+Rather than writing a long explanation centered around a theoretical situation, I decided to write a tiny application to quickly demonstrate this vulnerability. Enter [raceybank](https://github.com/tomsteele/raceybank), a little Node application with a LevelDB backend. This is incredibly simple and somewhat silly, but it demonstrates the issue well.
 
-This is incredibly simple and somewhat silly, but it demonstrates the issue well. Consider we have a banking application, or maybe we have a store that gives a user credits. Whatever. Let's look at our user model.
+We're going to walk through the application now. There are instructions in the repository so you can follow along at home. 
+
+Consider we have a banking application, or maybe we have a store that gives a user credits. Whatever. Let's look at our user model.
 
 ~~~~~javascript
 module.exports = new dulcimer.Model({
@@ -33,7 +35,7 @@ module.exports = new dulcimer.Model({
 }, { db: db, name: 'user'});
 ~~~~~
 
-Pretty straight forward, we have a user with a unique id, a name, and some amount of money. Our application consists of two routes, `GET /users` and `POST /transfer`. There are instructions in the repository so you can follow along at home. Here is the transfer route.
+Pretty straight forward, we have a user with a unique id, a name, and some amount of money. Our application consists of two routes, `GET /users` and `POST /transfer`. Here is the transfer route.
 
 
 ~~~~~javascript
@@ -171,7 +173,7 @@ $ ./exploit-osx
 2014/06/24 15:03:19 done
 ~~~~~
 
-Check out users balance.
+Check out users balances.
 
 ~~~~~shell
 curl http://localhost:3000/users | python -mjson.tool
@@ -196,7 +198,7 @@ curl http://localhost:3000/users | python -mjson.tool
 
 Carol and Bob both have $200. WE JUST CREATED MONEY. No we're not Midas, we're simply exploiting a race condition. Alice is read twice before the write. So each request instance believes they have the required funds.
 
-This is a traditional example and often used as the argument for why transactions are important. And in a real bank there would be much stricter control and fraud prevention to allow this to go unnoticed. But not everyone is a big bank with unlimited resources, and not every situation will deal in dollars and cents. This could be occur in something of relatively low importance, but still be a bug that could drive you to madness.
+This is a traditional example and often used as the argument for why transactions are important. In a real bank there would be much stricter control and fraud prevention to prevent this from going unnoticed. But not everyone is a big bank with unlimited resources, and not every situation will deal with dollars and cents. This could be occur in something of relatively low importance, but still be a bug that could drive you to madness.
 
 How can we prevent this? To me, this depends on the nature of the data being handled. If it's crucial financial data I would opt for a traditional database (there are NoSQL solutions that support transactions as well). If not, or you're already heavily invested in a existing solution, you can apply a lock/mutex around the troublesome operation. A library in Node land to solve this is [lock](https://github.com/dominictarr/lock). There are other mitigations, and some databases offer recommendations or built in mechanisms; investigate what works for you, look for this pattern, and test for it.
 
