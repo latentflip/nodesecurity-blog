@@ -8,8 +8,8 @@
   },
   "description": "The Blog",
   "dependencies": {
-    "bucker": "^0.4.11",
-    "bumble": "^2.0.1",
+    "bucker": "^1.0.10",
+    "bumble": "^2.0.3",
     "config": "^0.4.36",
     "connect-githubhook": "^0.1.2",
     "electricfence": "0.0.3",
@@ -22,7 +22,7 @@
     "sugar": "^1.4.1",
     "underscore": "^1.6.0",
     "walk": "^2.3.3",
-    "watch": "^0.7.0",
+    "watch": "^0.10.0",
     "wtchr": "0.0.1"
   },
   "main": "server.js",
