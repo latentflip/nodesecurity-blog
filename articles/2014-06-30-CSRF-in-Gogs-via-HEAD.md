@@ -1,5 +1,5 @@
 ---
-date: 2014-07-01 04:15:48 GMT
+date: 2014-06-30 04:15:48 GMT
 slug: csrf-in-gogs-via-head
 tags: Go,csrf
 title: CSRF in Gogs via HEAD
