@@ -18,7 +18,7 @@ This is valid because applications should not change state via the GET method, a
 Gogs uses [Martini](https://github.com/go-martini/martini), which supports Sinatra like routing. We can see routes for managing users below.
 
 ~~~~~go
-// Taken form https://github.com/gogits/gogs/blob/45462662e9bdb001f1cf3d4ca0e4d679757c7642/web.go
+// Taken from https://github.com/gogits/gogs/blob/45462662e9bdb001f1cf3d4ca0e4d679757c7642/web.go
 
 m.Group("/admin/users", func(r martini.Router) {
     r.Any("/new", bindIgnErr(auth.RegisterForm{}), admin.NewUser)
