@@ -7,7 +7,7 @@ author: Tom Steele
 type: text
 ---
 
-I'm a big fan of [Go](http://golang.org/), so I'm always on the look out for emerging projects within the community. One such project is [Gogs](http://gogs.io/), an open source self-hosted Git service. This is a pretty ambitious effort, and  definitely a project to watch. While looking over some of the code I identified a [Cross-Site Request Forgery](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)) ("CSRF") vulnerability that presented itself in a not so common manner.
+I'm a big fan of [Go](http://golang.org/), so I'm always on the look out for emerging projects within the community. One such project is [Gogs](http://gogs.io/), an open source self-hosted Git service. This is a pretty ambitious effort, and  definitely a project to watch. While looking over some of the code I identified a [Cross-Site Request Forgery](https://www.owasp.org/index.php/Cross-Site_Request_Forgery) ("CSRF") vulnerability that presented itself in a not so common manner.
 
 CSRF is a technique that exploits a server's inherit trust in the user's browser. In practice, an attacker will host a malicious site and submit requests on behalf of the user. There are [many techniques](https://community.rapid7.com/community/metasploit/blog/2014/04/15/exploiting-csrf-without-javascript) to do this, far too many to discuss here, but the results can be [devastating](http://disconnected.io/2014/03/18/how-i-hacked-your-router/).
 
