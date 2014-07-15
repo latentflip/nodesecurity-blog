@@ -79,7 +79,9 @@ server.route({
 server.start();
 ~~~~~
 
-Lastly, we have the HTTP API. We took the majority of API methods from Burp (and some of our own) and exposed them over HTTP. You can do all manner of things including querying/updating scope, sending URL's to the spider, performing active scans, sending alerts, etc. As an example, let's use curl to get a list of cookies.
+Lastly, we have the HTTP API. We took the majority of API methods from Burp (and some of our own) and exposed them over HTTP. You can do all manner of things including querying/updating scope, sending URL's to the spider, performing active scans, sending alerts, etc. 
+
+As an example, let's use curl to get a list of cookies.
 
 ~~~~~shell
 $ curl http://localhost:8001/jar | python -mjson.tool
