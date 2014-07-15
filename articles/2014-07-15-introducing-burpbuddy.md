@@ -11,7 +11,7 @@ Here at ^Lift we perform a lot of application assessments. One of the greatest t
 
 That's the problem we've attempted to solve. With [burpbuddy](https://github.com/liftsecurity/burpbuddy) we took the API and exposed it over various mediums including WebSockets, HTTP, and Webhooks. Now you can write plugins quickly in any language you choose, and can extend Burp in incredible ways.
 
-Here is a quick node example using the WebSocket functionality, which is great for doing things outside of Burp. We ingest incoming requests, strip out any session cookies, and make the request outside of Burp to check for forceful browsing. It's not a bullet proof design, and leaves a lot to be desired, but for the purpose of demonstration, is adequate.
+Here is a quick node example using the WebSocket functionality, which is great for doing things outside of Burp. We ingest incoming requests, strip out any session cookies, and make the request outside of Burp to check for forceful browsing.
 
 ~~~~~javascript
 var WebSocket = require('ws');
