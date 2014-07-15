@@ -99,4 +99,6 @@ $ curl http://localhost:8001/jar | python -mjson.tool
 }
 ~~~~~
 
-Anyway, we think this is great for building plugins and hope you all like it too. Give it a shot, and if you build something cool, [tell us](https://twitter.com/liftsecurity).
+We think this is a great tool for building plugins and hope you will like it. Give it a shot, and if you build something cool, [tell us](https://twitter.com/liftsecurity).
+
+This project drew inspiration from [hiccup](https://github.com/zynga/hiccup).
