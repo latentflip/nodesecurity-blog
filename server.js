@@ -1,7 +1,7 @@
-var Hapi = require('hapi');
-var config = require('config');
-var jade = require('jade');
-var bumble = require('bumble');
+var Hapi          = require('hapi');
+var config        = require('config');
+var jade          = require('jade');
+var bumble        = require('bumble');
 var electricfence = require('electricfence');
 var bumbleOptions = require('./blogConfig.json');
 

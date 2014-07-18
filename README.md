@@ -1,7 +1,7 @@
-blog.liftsecurity.io
+blog.nodesecurity.io
 ====================
 
-LiftSecurity Blog (app)
+NodeSecurity Blog (app)
 
 
 ```

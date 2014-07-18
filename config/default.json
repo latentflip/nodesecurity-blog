@@ -1,8 +1,8 @@
 {
-  "baseUrl": "https://localhost:3000",
+  "baseUrl": "https://localhost:8080",
   "hapi": {
     "host": "127.0.0.1",
-    "port": "3000"
+    "port": "8080"
   },
   "electricfence": {
     "path": "public",

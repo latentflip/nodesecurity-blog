@@ -1,10 +1,10 @@
 {
-  "name": "blog.liftsecurity.io",
+  "name": "blog.nodesecurity.io",
   "version": "0.0.1",
-  "homepage": "http://blog.liftsecurity.io",
+  "homepage": "http://blog.nodesecurity.io",
   "repository": {
     "type": "git",
-    "url": "git@github.com:liftsecurity/blog.liftsecurity.io.git"
+    "url": "git@github.com:nodesecurity/blog.nodesecurity.io.git"
   },
   "description": "The Blog",
   "dependencies": {
