@@ -1,10 +1,10 @@
 {
   "name": "blog.nodesecurity.io",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "homepage": "http://blog.nodesecurity.io",
   "repository": {
     "type": "git",
-    "url": "git@github.com:nodesecurity/blog.nodesecurity.io.git"
+    "url": "https://github.com/nodesecurity/nodesecurity-blog"
   },
   "description": "The Blog",
   "dependencies": {

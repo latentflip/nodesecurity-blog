@@ -7,4 +7,5 @@ NodeSecurity Blog (app)
 ```
 npm i
 npm start
+#bam!
 ```
