@@ -1,0 +1,8 @@
+- if (allTagMap)
+  h3 Tags
+  .taglist
+    each tag, slug in allTagMap
+      - if (tag && slug)
+        a(href='/tag/#{slug}', alt='#{tag}', title='#{tag}') !{tag.replace(' ', '&nbsp;')}
+        | 
+
