@@ -1,4 +1,18 @@
 extends layout
 
 block content
+  .container
+    .row
+      .span8
+        each post in postData
+          .row
+            include includes/post_detail
+          hr
+          br  
+      .span4      
+      //- 
+      //- TODO: put here the tags things
+      //- 
 
+    .row.container  
+      include includes/pagination
