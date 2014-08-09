@@ -1,8 +1,0 @@
-- if (allTagMap)
-  h4 Tag categories
-  .taglist
-    each tag, slug in allTagMap
-      - if (tag && slug)
-        a(href='/tag/#{slug}', alt='#{tag}', title='#{tag}') !{tag.replace(' ', '&nbsp;')}
-        | 
-
