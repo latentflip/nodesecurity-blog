@@ -1,4 +1,5 @@
 {
+
   "blogTitle": "Node Security blog",
   "blogSubtitle": "",
   "blogAuthor": "Node Security Team",
@@ -12,4 +13,3 @@
   "maxPosts": 10,
   "browserCache": 3600000
 }
-

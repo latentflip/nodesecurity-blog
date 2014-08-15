@@ -2,6 +2,7 @@
 node_modules/
 
 # ops ignores
+
 lib-cov
 *.seed
 *.log
@@ -17,4 +18,6 @@ results
 
 npm-debug.log
 
+
 config.codekit
+node_modules
