@@ -1,7 +1,6 @@
 ---
 date: "2013-07-09 05:04:00 GMT"
 slug: "contributor-spotlight-jack-tarantino"
-tumblr_post_url: "http://blog.nodesecurity.io/post/54977395763/contributor-spotlight-jack-tarantino"
 tags: spotlight
 title: "Contributor Spotlight: Jack Tarantino"
 type: text

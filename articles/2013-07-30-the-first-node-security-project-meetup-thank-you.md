@@ -1,7 +1,6 @@
 ---
 date: "2013-07-31 03:52:00 GMT"
 slug: "the-first-node-security-project-meetup-thank-you"
-tumblr_post_url: "http://blog.nodesecurity.io/post/56939364399/the-first-node-security-project-meetup-thank-you"
 tags: meetup, vegas, defcon
 type: photo
 original_photos: "http://25.media.tumblr.com/175503f1b951f6b435ea829237466ac3/tumblr_mqs83ySO6N1s5zgvoo1_1280.png"

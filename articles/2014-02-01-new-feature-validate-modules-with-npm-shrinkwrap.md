@@ -1,7 +1,6 @@
 ---
 date: "2014-02-01 10:17:11 GMT"
 slug: "new-feature-validate-modules-with-npm-shrinkwrap"
-tumblr_post_url: "http://blog.nodesecurity.io/post/75342048303/new-feature-validate-modules-with-npm-shrinkwrap"
 tags: npm, confidential, publish, leak
 title: "New Feature: Validate modules with npm shrinkwrap"
 type: text

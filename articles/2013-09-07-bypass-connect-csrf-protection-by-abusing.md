@@ -1,7 +1,6 @@
 ---
 date: "2013-09-07 17:03:10 GMT"
 slug: "bypass-connect-csrf-protection-by-abusing"
-tumblr_post_url: "http://blog.nodesecurity.io/post/60555138201/bypass-connect-csrf-protection-by-abusing"
 tags: CSRF, connect, methodOverride, middleware
 title: Bypass Connect CSRF protection by abusing methodOverride Middleware
 type: text

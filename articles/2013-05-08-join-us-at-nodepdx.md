@@ -1,7 +1,6 @@
 ---
 date: "2013-05-09 02:20:00 GMT"
 slug: "join-us-at-nodepdx"
-tumblr_post_url: "http://blog.nodesecurity.io/post/49982589146/join-us-at-nodepdx"
 tags: nodepdx, conference
 title: Join us at NodePDX
 type: text

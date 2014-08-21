@@ -1,7 +1,6 @@
 ---
 date: "2013-04-21 00:48:00 GMT"
 slug: logistics
-tumblr_post_url: "http://blog.nodesecurity.io/post/48482636726/logistics"
 tags: kickoff, logistics, process
 title: Logistics
 type: text

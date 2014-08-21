@@ -1,7 +1,6 @@
 ---
 date: "2013-05-03 23:21:30 GMT"
 slug: "contributor-spotlight-luca-carettoni"
-tumblr_post_url: "http://blog.nodesecurity.io/post/49546356302/contributor-spotlight-luca-carettoni"
 tags: spotlight
 title: "Contributor Spotlight: Luca Carettoni"
 type: text

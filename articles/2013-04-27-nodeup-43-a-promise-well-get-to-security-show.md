@@ -1,7 +1,6 @@
 ---
 date: "2013-04-27 22:12:25 GMT"
 slug: "nodeup-43-a-promise-well-get-to-security-show"
-tumblr_post_url: "http://blog.nodesecurity.io/post/49039984825/nodeup-43-a-promise-well-get-to-security-show"
 tags: NodeUp
 title: "NodeUp 43: A promise we'll get to security show"
 type: link

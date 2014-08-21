@@ -1,7 +1,6 @@
 ---
 date: "2013-05-15 19:27:00 GMT"
 slug: "contributor-spotlight-bear"
-tumblr_post_url: "http://blog.nodesecurity.io/post/50512779769/contributor-spotlight-bear"
 tags: spotlight
 title: "Contributor Spotlight: Bear"
 type: text

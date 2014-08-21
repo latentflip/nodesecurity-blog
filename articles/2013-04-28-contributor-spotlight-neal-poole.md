@@ -1,7 +1,6 @@
 ---
 date: "2013-04-29 03:59:00 GMT"
 slug: "contributor-spotlight-neal-poole"
-tumblr_post_url: "http://blog.nodesecurity.io/post/49155462900/contributor-spotlight-neal-poole"
 tags: spotlight
 title: "Contributor Spotlight: Neal Poole"
 type: text

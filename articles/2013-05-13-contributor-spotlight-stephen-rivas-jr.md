@@ -1,7 +1,6 @@
 ---
 date: "2013-05-13 16:44:00 GMT"
 slug: "contributor-spotlight-stephen-rivas-jr"
-tumblr_post_url: "http://blog.nodesecurity.io/post/50349265760/contributor-spotlight-stephen-rivas-jr"
 tags: spotlight
 title: "Contributor Spotlight: Stephen Rivas JR"
 type: text

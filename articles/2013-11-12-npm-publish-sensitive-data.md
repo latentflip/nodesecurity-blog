@@ -1,7 +1,6 @@
 ---
 date: "2013-11-13 00:17:11 GMT"
 slug: "npm-publish-sensitive-data"
-tumblr_post_url: "http://blog.nodesecurity.io/post/66823501521/npm-publish-sensitive-data"
 tags: npm, confidential, publish, leak
 title: "npm publish sensitive-data"
 type: text
