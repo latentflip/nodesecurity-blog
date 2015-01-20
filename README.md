@@ -1,23 +1,19 @@
 blog.nodesecurity.io
 ====================
 
-NodeSecurity Blog (app)
+The Node Security Project Blog
 
+# Badgers
 
-```
-npm i
-npm start
-#bam!
-```
+[![Dependency Status](https://david-dm.org/nodesecurity/nodesecurity-blog.png)](https://david-dm.org/nodesecurity/nodesecurity-blog)[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/nodesecurity/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-# BLOG [![Dependency Status](https://david-dm.org/nodesecurity/nodesecurity-blog.png)](https://david-dm.org/nodesecurity/nodesecurity-blog)
 
 # Usage
 
 ```
-git clone https://github.com/nodesecurity/nodesecurity-blog.git
-cd nodescurity-blog
-npm i
-node server
-open http://localhost:3000
+$ git clone https://github.com/nodesecurity/nodesecurity-blog.git
+$ cd nodescurity-blog
+$ npm i
+$ node server.js
+$ open http://localhost:3000
 ```
