@@ -4,6 +4,7 @@ slug: "new-feature-validate-modules-with-npm-shrinkwrap"
 tags: npm, confidential, publish, leak
 title: "New Feature: Validate modules with npm shrinkwrap"
 type: text
+author: David Dias
 ---
 
 With the recent site update to hapi.js we tossed in a new feature.
