@@ -61,9 +61,9 @@ One of our favorite tools is [david-dm](http://david-dm.org). david-dm is a depe
 
 Do you want to report a vulnerability but don't know how to get it published? Ping us at report@nodesecurity.io. 
 
-Have some spare time to code and want to contribute to the project? Our code is 100% open source on GitHub and we always welcome new patches! Check it out here: https://github.com/nodesecurity . 
+Have some spare time to code and want to contribute to the project? Our code is 100% open source on GitHub and we always welcome new patches! Check it out here: https://github.com/nodesecurity. 
 
-Want to contribute but not sure how yet? Feel free to jump on gitter and say hi! Our room is https://gitter.im/nodesecurity/community .
+Want to contribute but not sure how yet? Feel free to jump on gitter and say hi! Our room is https://gitter.im/nodesecurity/community.
 
 Also, if you build something you would like to share that is using our tooling, let us know!
 
