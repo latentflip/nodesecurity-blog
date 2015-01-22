@@ -9,7 +9,7 @@ author: David Dias
 
 The Node Security Project team has been working alongside the Node.js community now for more than a year. Our goal is to identify vulnerabilities in the open source module ecosystem that people use and love, provide quantifiable action items when these threats are found, and assure that patches get landed, helping developers ship better secure code.
 
-Today, in this blog post, we want to tell you how you can levarage this effort, so that your code goes into projection without known vulnerabilities.
+Today, in this blog post, we want to tell you how you can levarage this effort, so that your code goes into production without known vulnerabilities.
 
 # Command line tools
 
@@ -17,7 +17,7 @@ Today, in this blog post, we want to tell you how you can levarage this effort, 
 $ npm i nsp -g
 ```
 
-This is all you need to do to start auditing your dependencies against the Node Security Project database. Currently the tool supports two ways of auditing, for package.json and for shrinkwrap.json, you can them as follows (e,g):
+This is all you need to do to start auditing your dependencies against the Node Security Project database. Currently the tool supports two ways of auditing, for package.json and for shrinkwrap.json, you can use them as follows (e,g):
 
 ```
 $ nsp audit-package
