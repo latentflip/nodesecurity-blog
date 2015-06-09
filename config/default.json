@@ -3,12 +3,5 @@
   "hapi": {
     "host": "127.0.0.1",
     "port": "8080"
-  },
-  "electricfence": {
-    "path": "public",
-    "url": "/",
-    "listing": "true",
-    "index": "false",
-    "cache": "3600000"
   }
 }

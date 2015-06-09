@@ -7,13 +7,14 @@
     "url": "https://github.com/nodesecurity/nodesecurity-blog"
   },
   "scripts": {
-      "codestyle": "./node_modules/.bin/jscs server.js",
-      "lint": "./node_modules/.bin/jshint ."
+    "codestyle": "./node_modules/.bin/jscs server.js",
+    "lint": "./node_modules/.bin/jshint .",
+    "start": "grunt serve"
   },
   "precommit": [
     "codestyle",
     "lint"
-  ],    
+  ],
   "description": "The Blog",
   "dependencies": {
     "bucker": "^1.0.11",
@@ -34,8 +35,15 @@
   },
   "main": "server.js",
   "devDependencies": {
+    "autoprefixer-stylus": "^0.7.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-cssmin": "^0.12.3",
+    "grunt-contrib-stylus": "^0.21.0",
+    "grunt-contrib-watch": "^0.6.1",
     "jscs": "^1.10.0",
     "jshint": "^2.5.11",
-    "precommit-hook": "^1.0.7"
+    "precommit-hook": "^1.0.7",
+    "yeticss": "^6.0.7"
   }
 }

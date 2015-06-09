@@ -13,6 +13,7 @@ server.views({
         jade: jade
     },
     path: 'views',
+    isCached: process.env.NODE_ENV === 'production'
 });
 
 server.pack.register({
